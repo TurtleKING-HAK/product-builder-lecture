@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>다크모드 & 화이트모드 테마 전환</title>
+  <title>Lotto Number Recommender</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
-<body>
-  <h1>테마 전환 테스트</h1>
-  <button id="theme-toggle">다크 모드로 전환</button>
+<body data-theme="light">
+  <div class="theme-selector">
+    <button class="theme-btn" style="background-color: #f8f9fa; color: #212529; border: 1px solid #ddd;" onclick="setTheme('light')">White</button>
+    <button class="theme-btn" style="background-color: #121212; color: #e0e0e0;" onclick="setTheme('dark')">Dark</button>
+    <button class="theme-btn" style="background-color: #fffde7; color: #5d4037; border: 1px solid #e1e1e1;" onclick="setTheme('yellow')">Yellow</button>
+  </div>
+
+  <div class="container">
+    <h1>Lotto Number Generator</h1>
+    <p>행운의 번호를 확인해보세요!</p>
+    
+    <div id="lotto-numbers" class="lotto-container">
+      <!-- 로또 공들이 여기에 생성됩니다 -->
+    </div>
+
+    <button id="generate-btn" class="action-btn">번호 생성하기</button>
+  </div>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
